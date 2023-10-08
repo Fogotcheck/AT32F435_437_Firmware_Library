@@ -134,12 +134,17 @@ SECTIONS
   /* User_heap_stack section, used to check that there is enough RAM left */
   ._user_heap_stack :
   {
+    /* ToDO You use the functions of the standard library (NEWLIB), so you should implement 
+    these methods according to your own platform If you're sure you don't need to implement 
+    these, just add an empty implementation to the link add link. */
+    __heap_start = .;
     . = ALIGN(8);
     PROVIDE ( end = . );
     PROVIDE ( _end = . );
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
+     __heap_end = .; 
   } >RAM
 
   /* Remove information from the standard libraries */

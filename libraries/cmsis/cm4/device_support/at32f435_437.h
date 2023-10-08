@@ -45,7 +45,8 @@ extern "C" {
 /** @addtogroup Library_configuration_section
   * @{
   */
-
+ /*TODO необходимо исправьть перенести в cmakeLists*/
+#define AT32F437ZMT7 1
 /**
   * tip: to avoid modifying this file each time you need to switch between these
   *      devices, you can define the device in your toolchain compiler preprocessor.
